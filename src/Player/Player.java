@@ -10,7 +10,7 @@ import java.awt.*;
  * @version 1.0
  *
  * Klasse des Spielers mit den Attributen
- * lives -> Leben des Spielers
+ * livesz -> Leben des Spielers
  * experience -> Erfahrungspunkte des Spielers
  * level -> Level des Spielers
  * designation -> Levelname des Spielers
