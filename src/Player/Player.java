@@ -1,5 +1,7 @@
 package Player;
 
+import Inventory.Inventory;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -12,12 +14,14 @@ import java.awt.*;
  * experience -> Erfahrungspunkte des Spielers
  * level -> Level des Spielers
  * designation -> Levelname des Spielers
+ * inventory -> Inventar des Spielers
  */
 public class Player extends Rectangle {
     private double lives = 20.0;
     private double experience;
     private int level = 1;
     private Designation designation = Designation.Beginner;
+    private Inventory inventory = new Inventory();
 
     private Image picture;
     public Player () {
