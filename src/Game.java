@@ -1,5 +1,11 @@
+import Inventory.Inventory;
+import Player.Player;
+
 import javax.swing.*;
-public class Game extends JPanel implements Runnable{
+import java.awt.*;
+
+public class Game extends JPanel implements Runnable {
+    Player player = new Player();
     Thread gamethread = new Thread(this);
     public Game() {
         JFrame frame = new JFrame();
@@ -8,6 +14,7 @@ public class Game extends JPanel implements Runnable{
         frame.setVisible(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLayout(null);
+        player.getInventory().openInventory();
         //frame.setIconImage();
     }
 
@@ -21,5 +28,10 @@ public class Game extends JPanel implements Runnable{
                 e.printStackTrace();
             }
         }
+    }
+
+    public void paintComponent (Graphics g) {
+        player.drawFigure(g, this);
+        player.getInventory().repaint();
     }
 }

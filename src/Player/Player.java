@@ -61,4 +61,11 @@ public class Player extends Rectangle {
     public int getLevel() {
         return level;
     }
+
+    /**
+     * @return Inventory from the Player
+     */
+    public Inventory getInventory() {
+        return inventory;
+    }
 }

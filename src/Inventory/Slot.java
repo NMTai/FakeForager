@@ -1,5 +1,7 @@
 package Inventory;
 
+import Items.Item;
+
 import javax.swing.*;
 
 public class Slot {
@@ -7,6 +9,12 @@ public class Slot {
     private ImageIcon icon;
     public Slot () {
 
+    }
+    public Slot (Item item) {
+
+    }
+    public Slot (String icon) {
+        this.icon = new ImageIcon(new ImageIcon(icon).getImage().getScaledInstance(50,50, 1));
     }
 
     /**
